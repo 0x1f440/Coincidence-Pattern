@@ -1,0 +1,185 @@
+* {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  color: #888;
+}
+
+input[type=number]{
+    background: transparent;
+    border: none;
+    color: black;
+    border-bottom: 1px solid #888;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+@keyframes fadeout {
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    40% { opacity: 1; }
+    70% { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    40% { opacity: 1; }
+    70% { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    40% { opacity: 1; }
+    70% { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    40% { opacity: 1; }
+    70% { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    40% { opacity: 1; }
+    70% { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+.counters {
+  -webkit-animation: fadeout 3s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadeout 3s; /* Firefox < 16 */
+    -ms-animation: fadeout 3s; /* Internet Explorer */
+     -o-animation: fadeout 3s; /* Opera < 12.1 */
+        animation: fadeout 3s;
+
+  transition: .3s;
+  opacity: 0;
+  box-sizing: border-box;
+  padding: 7px;
+}
+.counters:hover {
+  opacity: 1;
+}
+
+#random {
+  display: none;
+  width: 32px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+svg path{
+  fill: #888!important;
+}
+
+#counter {
+  position: absolute;
+  left: calc(50% - 120px);
+  top: 16px;
+}
+
+#counter .counters {
+  text-align: center;
+}
+
+#counter .counter-wrapper {
+  display: inline-block;
+}
+
+#counter .number {
+  width: 40px;
+  font-size: 40px;
+  text-align: center;
+  font-family: courier;
+  font-weight: bold;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+
+.cr {
+    width: 100px;
+    height: 40px;
+    background: #333;
+    margin: 6px 0;
+
+    border-radius: 50px;
+    position: relative;
+}
+
+
+.cr label {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    z-index: 1;
+    left: 87px;
+    background: #ccc;
+}
+
+/**
+ * Create the checkbox event for the label
+ */
+.cr input[type=checkbox]:checked + label {
+
+    background: #97ff91;
+}
+
+.close-button {
+  color: #888;
+  text-align: right;
+}
+
+.dg {
+  color: #fff;
+}
+
+.property-name {
+    margin-left: 10px;
+}
+.dg .closed li:not(.title) {
+
+  margin-top: -5px;
+}
