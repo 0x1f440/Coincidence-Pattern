@@ -16,6 +16,7 @@ body {
 }
 
 input[type=number]{
+    -moz-appearance: textfield;
     background: transparent;
     border: none;
     color: black;

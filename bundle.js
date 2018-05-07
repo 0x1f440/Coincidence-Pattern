@@ -406,7 +406,8 @@ function draw() {
 
   }
   else{
-    ctx.strokeStyle = 'rgba(0,0,0,0.25)'
+    ctx.globalCompositeOperation = 'multiply'
+    ctx.strokeStyle = 'rgba(0,0,0,0.5)'
   }
 
 
