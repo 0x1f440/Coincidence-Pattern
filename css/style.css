@@ -23,7 +23,7 @@ input[type=number]{
     border-bottom: 1px solid #888;
 }
 
-  input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: textfield;
@@ -160,11 +160,7 @@ input[type=checkbox] {
     background: #ccc;
 }
 
-/**
- * Create the checkbox event for the label
- */
 .cr input[type=checkbox]:checked + label {
-
     background: #97ff91;
 }
 
@@ -178,9 +174,27 @@ input[type=checkbox] {
 }
 
 .property-name {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-.dg .closed li:not(.title) {
 
+.dg .closed li:not(.title) {
   margin-top: -5px;
+}
+
+#instruction {
+  width: 500px;
+  top: calc(50% - 20px);
+  left: calc(50% - 250px);
+  position: absolute;
+  text-align: center;
+  font-family: courier;
+  opacity: 0;
+
+  -webkit-animation: fadeout 5s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadeout 5s; /* Firefox < 16 */
+    -ms-animation: fadeout 5s; /* Internet Explorer */
+     -o-animation: fadeout 5s; /* Opera < 12.1 */
+        animation: fadeout 5s;
+
+
 }
