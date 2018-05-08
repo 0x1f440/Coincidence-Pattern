@@ -125,6 +125,7 @@ var countUpArrow = document.getElementsByClassName("count-up");
 var countDownArrow = document.getElementsByClassName("count-down");
 var isFilled = false;
 var numbers = [];
+var size = 40;
 
 function checkCounterIsFilled() {
   for(i=0; i<6; i++){
@@ -261,7 +262,7 @@ var options = {
   , 'Radius #2': radii[1]
   , 'Radius #3': radii[2]
   , 'Radius #4': radii[3]
-  , 'Size': 40
+  , 'Size': size
   , 'Animate': true
   , 'Dark' : false
   , 'Numbers' : true
@@ -274,6 +275,14 @@ function makePattern(){
     input += document.getElementById("counter" + i).value;
   }
   sliderCount = input[0] % 3 + 2;
+
+  var in_min = 0;
+  var in_max = 999999;
+
+  var out_min = 10;
+  var out_max = 200;
+
+  size = parseInt((input - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
 
   var hash = md5(input);
   //console.log(hash);
