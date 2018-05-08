@@ -402,11 +402,10 @@ function draw() {
 
   if (options.Dark){
     ctx.globalCompositeOperation = 'lighter'
-    ctx.strokeStyle = 'rgba(205,255,215,0.25)'
+    ctx.strokeStyle = 'rgba(205,255,215,0.5)'
 
   }
   else{
-    ctx.globalCompositeOperation = 'multiply'
     ctx.strokeStyle = 'rgba(0,0,0,0.5)'
   }
 
