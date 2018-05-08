@@ -39,7 +39,7 @@ var gallery = document.getElementById("gallery");
 
 for(i=1; i<day.length; i++){
 
-  var string = "<div class='gallery'><div class='info'>4/"+ i +"<br>"+ spent[i] +"</div><img src='img/patterns/pattern (" + i + ").png'>"
+  var string = "<div class='gallery'><div class='info fade-objects'>4/"+ i +"<br>"+ spent[i] +"</div><img src='img/patterns/pattern (" + i + ").png'>"
   string += "<div class='receipt'><div class='overlay'></div>";
 
   for(j=0; j<day[i].length; j++){
